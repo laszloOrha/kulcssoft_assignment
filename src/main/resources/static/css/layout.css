@@ -1,5 +1,62 @@
+/*Reset to avoid browser defaults.*/
+* {
+    margin:0;
+    padding:0;
+}
+
 body {
-    background-image: url("https://images.pexels.com/photos/583848/pexels-photo-583848.jpeg?auto=compress&cs=tinysrgb&h=650&w=940");
+    background-image: url("/img/background-business.jpg");
     background-color: #cccccc;
     background-size:cover;
+}
+
+#navbar {
+    overflow: hidden;
+    background-color: rgba(0,0,0,0.5);
+;
+}
+
+#navbar a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px;
+    text-decoration: none;
+}
+
+.content {
+    padding: 16px;
+}
+
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+.sticky + .content {
+    padding-top: 60px;
+}
+
+.navbar-button {
+    background: transparent;
+    border: none;
+    color: lightgrey;
+    float: right;
+    padding: 15px 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+
+}
+
+#logo {
+    width: 10%;
+    height: auto;
+    padding-left: 10px;
+    padding-top: 7px;
 }
