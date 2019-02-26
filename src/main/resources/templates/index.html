@@ -3,6 +3,8 @@
 <head>
     <link rel="stylesheet" type="text/css" href="/css/layout.css">
     <script src="/js/navbar.js" defer></script>
+    <script src="/js/user-ajax.js" defer></script>
+    <script src="jquery-3.3.1.min.js"></script>
     <meta charset="UTF-8">
     <title>KulcsSoft</title>
 </head>
@@ -13,6 +15,16 @@
     <button class="navbar-button" id="add">Add New User</button>
     <button class="navbar-button" id="delete">Delete User</button>
     <button class="navbar-button" id="list">List All Users</button>
+</div>
+
+<div id="table-div" style="display: none">
+    <table id="user-table">
+        <tr>
+            <th>ID</th>
+            <th>Username</th>
+            <th>E-mail address</th>
+        </tr>
+    </table>
 </div>
 
 </body>

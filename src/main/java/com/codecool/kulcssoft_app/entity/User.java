@@ -1,8 +1,6 @@
 package com.codecool.kulcssoft_app.entity;
 
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -12,6 +10,8 @@ import javax.persistence.Id;
 @AllArgsConstructor
 @Builder
 @Entity
+@Getter
+@Setter
 public class User {
 
     @Id

@@ -8,6 +8,9 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
 
+import javax.annotation.PostConstruct;
+
+
 @SpringBootApplication
 public class KulcssoftAppApplication {
 
@@ -19,7 +22,6 @@ public class KulcssoftAppApplication {
         SpringApplication.run(KulcssoftAppApplication.class, args);
     }
 
-
     @Bean
     public CommandLineRunner init() {
         return args -> {
@@ -28,6 +30,30 @@ public class KulcssoftAppApplication {
                     .userEmail("john@codecool.com")
                     .build();
             userRepository.save(john);
+
+            User jack = User.builder()
+                    .userName("Jack")
+                    .userEmail("jack@codecool.com")
+                    .build();
+            userRepository.save(jack);
+
+            User kate = User.builder()
+                    .userName("Kate")
+                    .userEmail("kate@codecool.com")
+                    .build();
+            userRepository.save(kate);
+
+            User james = User.builder()
+                    .userName("James")
+                    .userEmail("james@codecool.com")
+                    .build();
+            userRepository.save(james);
+
+            User karen = User.builder()
+                    .userName("Karen")
+                    .userEmail("karen@codecool.com")
+                    .build();
+            userRepository.save(karen);
         };
     }
 }
