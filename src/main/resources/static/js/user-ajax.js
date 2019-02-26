@@ -10,7 +10,7 @@ function getAllUsers() {
         })
 
         .then(function (users) {
-            clearTable();
+            document.getElementById('user-table').innerHTML = ''
             users.forEach(function (user) {
                 console.log(user);
                 let newRow = '<tr>' +
@@ -21,14 +21,6 @@ function getAllUsers() {
                 table.insertAdjacentHTML('beforeend', newRow);
             });
             console.log("finished");
-            document.getElementById("table-div").style.display='block';
+            $('#table-div').fadeIn(1000);
         })
-}
-
-function clearTable() {
-    document.getElementById('user-table').innerHTML = '<tr>\n' +
-                                                '              <th>ID</th>\n' +
-                                                '              <th>Username</th>\n' +
-                                                '              <th>E-mail address</th>\n' +
-                                                '              </tr>'
 }
