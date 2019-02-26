@@ -12,4 +12,6 @@ public interface UserRepository extends JpaRepository<User, Integer> {
 
     void deleteUserById(Integer id);
 
+    List<User> findAllByAdminEmail(String adminEmail);
+
 }

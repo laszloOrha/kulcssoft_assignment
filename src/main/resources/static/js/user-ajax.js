@@ -4,13 +4,16 @@ listUsersButton.addEventListener('click', getAllUsers);
 
 function getAllUsers() {
     let table = document.getElementById('user-table');
-    fetch("/api/allusers")
+    fetch("/api/allusers", {
+        method: "POST",
+        body: localStorage.getItem("email")
+    })
         .then( function (response) {
             return response.json();
         })
 
         .then(function (users) {
-            document.getElementById('user-table').innerHTML = ''
+            document.getElementById('user-table').innerHTML = '';
             users.forEach(function (user) {
                 console.log(user);
                 let newRow = '<tr>' +

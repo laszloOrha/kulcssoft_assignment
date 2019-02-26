@@ -19,4 +19,5 @@ public class User {
     private Integer id;
     private String userName;
     private String userEmail;
+    private String adminEmail;
 }
