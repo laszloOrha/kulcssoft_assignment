@@ -11,3 +11,5 @@ function myFunction() {
         navbar.classList.remove("sticky");
     }
 }
+
+document.getElementById("add").addEventListener("click", console.log(localStorage));

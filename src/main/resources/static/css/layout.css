@@ -54,11 +54,27 @@ body {
 
 }
 
+a:link, a:visited {
+    background-color: transparent;
+    color: lightgrey;
+    float: right;
+    padding: 15px 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+}
+
+a:hover, a:active {
+    background-color: transparent;
+}
+
 #logo {
     width: 10%;
     height: auto;
     padding-left: 10px;
+    padding-right: 10px;
     padding-top: 7px;
+    float: left;
 }
 
 

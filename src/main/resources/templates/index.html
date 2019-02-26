@@ -4,7 +4,9 @@
     <link rel="stylesheet" type="text/css" href="/css/layout.css">
     <script src="/js/navbar.js" defer></script>
     <script src="/js/user-ajax.js" defer></script>
+    <script src="/js/app.js" defer></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdn.auth0.com/js/auth0/9.5.1/auth0.min.js"></script>
     <meta charset="UTF-8">
     <title>KulcsSoft</title>
 </head>
@@ -15,7 +17,13 @@
     <button class="navbar-button" id="add">Add New User</button>
     <button class="navbar-button" id="delete">Delete User</button>
     <button class="navbar-button" id="list">List All Users</button>
+    <a class="navbar-button" id="btn-logout" href="https://ks-userapp.eu.auth0.com/v2/logout?returnTo=http://localhost:8080/main">Logout</a>
 </div>
+
+
+
+
+
 
 <div id="table-div" style="display: none">
     <div class="tbl-header">
