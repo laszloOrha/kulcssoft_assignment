@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import javax.transaction.Transactional;
+import javax.validation.Valid;
 import java.util.List;
 
 @RestController
@@ -20,7 +21,7 @@ public class APIController {
     }
 
     @PostMapping("/api/newuser")
-    public boolean addNewUser(@RequestBody User user) {
+    public boolean addNewUser(@Valid @RequestBody User user) {
         return userRepository.save(user) != null;
     }
 
