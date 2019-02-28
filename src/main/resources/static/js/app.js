@@ -45,13 +45,6 @@ window.addEventListener('load', function() {
         expiresAt = 0;
     }
 
-    function isAuthenticated() {
-        // Check whether the current time is past the
-        // access token's expiry time
-        var expiration = parseInt(expiresAt) || 0;
-        return localStorage.getItem('isLoggedIn') === 'true' && new Date().getTime() < expiration;
-    }
-
     function handleAuthentication() {
         webAuth.parseHash(function(err, authResult) {
             if (authResult && authResult.accessToken && authResult.idToken) {
@@ -65,8 +58,6 @@ window.addEventListener('load', function() {
             }
         });
     }
-
-
 });
 
 function parseJwt (token) {

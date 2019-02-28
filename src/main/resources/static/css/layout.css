@@ -10,6 +10,10 @@ body {
     background-size:cover;
 }
 
+.navbar-button:focus {
+    outline: none;
+}
+
 #navbar {
     overflow: hidden;
     background-color: rgba(0,0,0,0.5);

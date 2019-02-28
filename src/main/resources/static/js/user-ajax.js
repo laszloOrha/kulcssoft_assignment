@@ -1,9 +1,12 @@
-let listUsersButton = document.getElementById('list');
-listUsersButton.addEventListener('click', getAllUsers);
+function init() {
+    let listUsersButton = document.getElementById('list');
+    listUsersButton.addEventListener('click', getAllUsers);
 
-let addNewUserButton = document.getElementById("new-user-submit");
-addNewUserButton.addEventListener('click', addNewUser);
+    let addNewUserButton = document.getElementById("new-user-submit");
+    addNewUserButton.addEventListener('click', addNewUser);
+}
 
+init();
 
 function addDeleteListeners() {
     let deleteButtons = document.querySelectorAll(".delete-icon");
@@ -62,7 +65,6 @@ function addNewUser() {
     let newUserName = document.getElementById("new-user-name").value;
     let newUserEmail = document.getElementById("new-user-email").value;
     let data = `{"userName":"${newUserName}", "userEmail":"${newUserEmail}","adminEmail":"${localStorage.getItem("email")}"}`;
-    //let data = `{"userName":"name", "userEmail":"name","adminEmail":"admin@codecool.com"}`;
     fetch("http://localhost:8080/api/newuser", {
         method: "POST",
         body: data,
