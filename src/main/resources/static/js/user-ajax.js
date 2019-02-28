@@ -1,6 +1,9 @@
 let listUsersButton = document.getElementById('list');
 listUsersButton.addEventListener('click', getAllUsers);
 
+let addNewUserButton = document.getElementById("new-user-submit");
+addNewUserButton.addEventListener('click', addNewUser);
+
 
 function addDeleteListeners() {
     let deleteButtons = document.querySelectorAll(".delete-icon");
@@ -53,6 +56,32 @@ function deleteUser(id) {
             }
         })
         .then(getAllUsers)
+}
+
+function addNewUser() {
+    let newUserName = document.getElementById("new-user-name").value;
+    let newUserEmail = document.getElementById("new-user-email").value;
+    let data = `{"userName":"${newUserName}", "userEmail":"${newUserEmail}","adminEmail":"${localStorage.getItem("email")}"}`;
+    //let data = `{"userName":"name", "userEmail":"name","adminEmail":"admin@codecool.com"}`;
+    fetch("http://localhost:8080/api/newuser", {
+        method: "POST",
+        body: data,
+        headers: {
+            'Content-Type': 'application/json'
+        }
+    })
+        .then(function (response) {
+            return response.json();
+        })
+        .then(function (isAdditionSuccessful) {
+            if(isAdditionSuccessful === true) {
+                throwAlert('success', "New user saved!");
+            }else {
+                throwAlert('danger', "Couldn't add new user!");
+            }
+        })
+        .then(getAllUsers)
+
 }
 
 function throwAlert (type, message) {

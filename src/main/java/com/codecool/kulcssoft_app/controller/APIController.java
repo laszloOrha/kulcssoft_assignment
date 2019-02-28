@@ -19,10 +19,15 @@ public class APIController {
         return userRepository.findAllByAdminEmail(adminEmail);
     }
 
+    @PostMapping("/api/newuser")
+    public boolean addNewUser(@RequestBody User user) {
+        return userRepository.save(user) != null;
+    }
+
     @DeleteMapping("/api/{id}")
     @Transactional
     public boolean deleteUser(@PathVariable(name = "id") Integer id){
-        User user = userRepository.findUSerById(id);
+        User user = userRepository.findUserById(id);
         if(user == null) {
             return false;
         }
