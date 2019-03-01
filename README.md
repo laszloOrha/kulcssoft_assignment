@@ -1,10 +1,10 @@
 # kulcssoft_assignment
 
-Created with IntelliJ IDEA
+Created with IntelliJ IDEA<br>
 
-Heroku: https://kulcssoft-userapp-ol.herokuapp.com/
+Heroku: https://kulcssoft-userapp-ol.herokuapp.com/<br>
 
-How to launch from Intellij:
+How to launch from Intellij:<br>
 -The appliction is built with springBoot
 -The pom.xml has all the dependencies needed which are downloaded upon the first time the project is opened
 -At the top bar near the 'play' button please choose the KulcsSoftAppApplication option click the play button
