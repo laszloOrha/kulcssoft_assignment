@@ -35,7 +35,7 @@ function getAllUsers() {
                     `<td>${user.id}</td>` +
                     `<td>${user.userName}</td>` +
                     `<td>${user.userEmail}</td>` +
-                    `<td><img id="del-${user.id}" class="delete-icon" src="/app/img/delete-icon.png"></td>` +
+                    `<td><img id="del-${user.id}" class="delete-icon" src="https://kulcssoft-userapp-ol.herokuapp.com/app/img/delete-icon.png"></td>` +
                     '</tr>';
                 table.insertAdjacentHTML('beforeend', newRow);
             });
