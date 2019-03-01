@@ -65,7 +65,7 @@ function addNewUser() {
     let newUserNameField = document.getElementById("new-user-name");
     let newUserEmailField = document.getElementById("new-user-email");
     let data = `{"userName":"${newUserNameField.value}", "userEmail":"${newUserEmailField.value}","adminEmail":"${localStorage.getItem("email")}"}`;
-    fetch("http://localhost:8080/api/newuser", {
+    fetch("/api/newuser", {
         method: "POST",
         body: data,
         headers: {
