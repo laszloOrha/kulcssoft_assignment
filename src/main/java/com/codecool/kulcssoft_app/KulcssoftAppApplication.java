@@ -27,35 +27,35 @@ public class KulcssoftAppApplication {
             User john = User.builder()
                     .userName("John")
                     .userEmail("john@codecool.com")
-                    .adminEmail("admin@codecool.com")
+                    .adminEmail("admin@kulcssoft.com")
                     .build();
             userRepository.save(john);
 
             User jack = User.builder()
                     .userName("Jack")
                     .userEmail("jack@codecool.com")
-                    .adminEmail("admin@codecool.com")
+                    .adminEmail("admin@kulcssoft.com")
                     .build();
             userRepository.save(jack);
 
             User kate = User.builder()
                     .userName("Kate")
                     .userEmail("kate@codecool.com")
-                    .adminEmail("admin@codecool.com")
+                    .adminEmail("admin@kulcssoft.com")
                     .build();
             userRepository.save(kate);
 
             User james = User.builder()
                     .userName("James")
                     .userEmail("james@codecool.com")
-                    .adminEmail("admin@codecool.com")
+                    .adminEmail("admin@kulcssoft.com")
                     .build();
             userRepository.save(james);
 
             User karen = User.builder()
                     .userName("Karen")
                     .userEmail("karen@codecool.com")
-                    .adminEmail("admin2@codecool.com")
+                    .adminEmail("admin2@kulcssoft.com")
                     .build();
             userRepository.save(karen);
         };
