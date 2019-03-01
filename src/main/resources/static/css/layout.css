@@ -90,7 +90,7 @@ a:hover, a:active {
     min-height: 75px;
 }
 
-#deletion-alert {
+#update-alert {
     margin-bottom: 0;
 }
 
@@ -104,9 +104,12 @@ h1{
 }
 table{
     width:100%;
-    table-layout: fixed;
+
 }
 
+#user-table {
+    background-color: rgba(55,90,125,0.7);
+}
 
 .tbl-header{
     background-color: rgba(255,255,255,0.7);
@@ -116,7 +119,6 @@ table{
     margin-right: auto;
 }
 .tbl-content{
-    height:300px;
     width: 70%;
     margin-left: auto;
     margin-right: auto;
@@ -133,7 +135,7 @@ th{
     text-transform: uppercase;
 }
 td{
-    padding: 15px;
+    padding: 20px 15px;
     text-align: center;
     vertical-align:middle;
     font-weight: 300;

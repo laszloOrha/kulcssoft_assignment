@@ -62,9 +62,9 @@ function deleteUser(id) {
 }
 
 function addNewUser() {
-    let newUserName = document.getElementById("new-user-name").value;
-    let newUserEmail = document.getElementById("new-user-email").value;
-    let data = `{"userName":"${newUserName}", "userEmail":"${newUserEmail}","adminEmail":"${localStorage.getItem("email")}"}`;
+    let newUserNameField = document.getElementById("new-user-name");
+    let newUserEmailField = document.getElementById("new-user-email");
+    let data = `{"userName":"${newUserNameField.value}", "userEmail":"${newUserEmailField.value}","adminEmail":"${localStorage.getItem("email")}"}`;
     fetch("http://localhost:8080/api/newuser", {
         method: "POST",
         body: data,
@@ -82,13 +82,18 @@ function addNewUser() {
                 throwAlert('danger', "Couldn't add new user!");
             }
         })
+        .then(function () {
+            console.log("clear");
+            newUserNameField.value = '';
+            newUserEmailField.value = '';
+        })
         .then(getAllUsers)
-
 }
 
 function throwAlert (type, message) {
-    $("#alert-area").append($(`<div id="deletion-alert" class="alert alert-${type}" role="alert">${message}</div>`));
+    $("#update-alert").remove();
+    $("#alert-area").append($(`<div id="update-alert" class="alert alert-${type}" role="alert">${message}</div>`));
     setTimeout(function () {
-        $("#deletion-alert").remove();
+        $("#update-alert").remove();
     }, 2000);
 }
