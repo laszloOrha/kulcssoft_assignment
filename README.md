@@ -6,7 +6,7 @@ Heroku: https://kulcssoft-userapp-ol.herokuapp.com/<br>
 
 There are 2 sample users already created filled with different sample data. You can register new users and add data for that account.
 
-<u>Sample users:</u><br>
+**Sample users:**<br>
 ADMIN1:<br>
 E-mail: 'admin@kulcssoft.hu'<br>
 Password: 'Kulcssoft01'<br>
@@ -15,7 +15,7 @@ ADMIN2:<br>
 E-mail: 'admin2@kulcssoft.hu'<br>
 Password: 'Kulcssoft01'<br>
 
-<u>How to launch from Intellij:</u><br>
+**How to launch from Intellij:**<br>
 -Java Development Kit 8 (JDK 8) need to be installed on the computer.<br>
 -The appliction is built with springBoot.<br>
 -The pom.xml has all the dependencies needed which are downloaded upon the first time the project is opened.<br>
