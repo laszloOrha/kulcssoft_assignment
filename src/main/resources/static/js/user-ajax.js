@@ -1,3 +1,4 @@
+//JS code for handling ajax calls
 function init() {
     let listUsersButton = document.getElementById('list');
     listUsersButton.addEventListener('click', getAllUsers);
@@ -35,7 +36,8 @@ function getAllUsers() {
                     `<td>${user.id}</td>` +
                     `<td>${user.userName}</td>` +
                     `<td>${user.userEmail}</td>` +
-                    `<td><img id="del-${user.id}" class="delete-icon" src="https://cdn4.iconfinder.com/data/icons/colicon/24/close_delete-128.png"></td>` +
+                    `<td><img id="del-${user.id}" class="delete-icon" src="https://cdn4.iconfinder.com/data/icons/colicon/24/close_delete-128.png
+"></td>` +
                     '</tr>';
                 table.insertAdjacentHTML('beforeend', newRow);
             });
