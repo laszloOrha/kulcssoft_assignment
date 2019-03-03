@@ -4,7 +4,9 @@ Created with IntelliJ IDEA<br>
 
 Heroku: https://kulcssoft-userapp-ol.herokuapp.com/<br>
 
-There are 2 sample users already created filled with different sample data. You can register new users and add data for that account.
+**The code on the master branch is set for Heroku deployment while the one on the development branch can be accessed on http://localhost:8080 after the server has been started from the IDEA.**
+
+There are 2 sample users already created and filled with different sample data. You can register new users and add data for that account.
 
 **Sample users:**<br>
 ADMIN1:<br>
@@ -23,4 +25,4 @@ Password: 'Kulcssoft01'<br>
 -If it doesn't work then the SDK should be set to Java 1.8.<br>
 -While the server run, you can reach the application on http://localhost:8080<br>
 -You can reach the DB separately on http://localhost:8080/h2-console, the username and password can be found in the file called 'application.properties'.<br>
--In the test folder there are tests for the repositories, you can run them with the little play buttons near the method names or yiu can run them all with the one near the class name.<br>
+-In the test folder there are tests for the repositories, you can run them with the little play buttons near the method names or you can run them all with the one near the class name.<br>
