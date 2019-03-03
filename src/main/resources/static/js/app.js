@@ -1,3 +1,4 @@
+//JS code for the integration of auth0 authorization.
 window.addEventListener('load', function() {
 
     var idToken;
@@ -60,6 +61,7 @@ window.addEventListener('load', function() {
     }
 });
 
+//Function to decode id token.
 function parseJwt (token) {
     var base64Url = token.split('.')[1];
     var base64 = base64Url.replace('-', '+').replace('_', '/');

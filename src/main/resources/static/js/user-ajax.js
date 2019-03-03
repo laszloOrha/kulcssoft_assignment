@@ -1,3 +1,4 @@
+//JS code for handling ajax calls
 function init() {
     let listUsersButton = document.getElementById('list');
     listUsersButton.addEventListener('click', getAllUsers);
